@@ -1,7 +1,6 @@
 import { Service } from "typedi";
 import { Repository } from "typeorm";
 import { InjectRepository } from "typeorm-typedi-extensions";
-import { UserInterface } from "../../context/user.interface";
 import { Permission } from "../../entities/permission";
 import { PermissionSameNameError } from "./permission.error";
 import { User } from "../../entities/user";
@@ -24,7 +23,6 @@ export class PermissionService {
         .relation(Permission, "permission")
         .of(userId)
         .loadOne();
-        
     }
 
     public async checkPermissionExists(name: string): Promise<boolean> {

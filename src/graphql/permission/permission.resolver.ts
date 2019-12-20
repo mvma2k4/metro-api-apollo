@@ -1,8 +1,7 @@
-import { Arg, Authorized, Ctx, Mutation, Query, Resolver, FieldResolver, Root } from "type-graphql";
+import { Arg, Authorized, Ctx, Mutation, Query, Resolver } from "type-graphql";
 import { Inject } from "typedi";
 import { Context } from "../../context/context.interface";
 import { Permission } from "../../entities/permission";
-import { User } from "../../entities/user";
 import { UserError } from "../../utils/genericTypes";
 import { PermissionInput } from "./permission.input";
 import { CreatePermissionPayload } from "./permission.payload";
@@ -30,10 +29,5 @@ export class PermissionResolver {
                 return new UserError(e.message);
             }
         }
-    }
-
-    @FieldResolver()
-    public async owner(@Root() permission: Permission): Promise<User[]> {
-        return this.permissionService.getUsersPermissionById(permission);
     }
 }
