@@ -10,7 +10,7 @@ TypeORM.useContainer(Container);
 interface Options {
     source: string;
     variableValues?: Record<string, any>;
-    userId?: number;
+    userId?: string;
 }
 
 let schema: GraphQLSchema;
@@ -25,7 +25,7 @@ export const gCall = async ({ source, variableValues, userId }: Options): Promis
         variableValues,
         contextValue: {
             user: {
-                id: userId
+                uuid: userId
             }
         }
     });

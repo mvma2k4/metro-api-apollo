@@ -51,7 +51,7 @@ describe("Project", (): void => {
 
         const response = await gCall({
             source: projectsQuery,
-            userId: unitTestUser.id
+            userId: unitTestUser.uuid
         });
 
         expect(response).toMatchObject({
@@ -83,7 +83,7 @@ describe("Project", (): void => {
             variableValues: {
                 input
             },
-            userId: unitTestUser.id
+            userId: unitTestUser.uuid
         });
 
         expect(response).toMatchObject({
@@ -109,7 +109,7 @@ describe("Project", (): void => {
             variableValues: {
                 input
             },
-            userId: unitTestUser.id
+            userId: unitTestUser.uuid
         });
 
         expect(response).toMatchObject({
@@ -127,7 +127,7 @@ describe("Project", (): void => {
 
         const response = await gCall({
             source: projectsQuery,
-            userId: emptyUser.id
+            userId: emptyUser.uuid
         });
 
         expect(response).toMatchObject({

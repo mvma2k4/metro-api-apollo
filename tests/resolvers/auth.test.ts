@@ -161,7 +161,7 @@ describe("Auth", (): void => {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
         expect(decoded.user).toMatchObject({
-            id: unitTestUser.id,
+            uuid: unitTestUser.uuid,
             username: unitTestUser.username,
             email: unitTestUser.email
         });

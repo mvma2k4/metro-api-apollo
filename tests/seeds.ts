@@ -30,7 +30,7 @@ export async function seedDatabase(connection: Connection): Promise<Record<strin
 
     await projectRepository.save(projects);
 
-    let users: Record<string, User> = {
+    const users: Record<string, User> = {
         unitTestUser,
         emptyUser
     }
