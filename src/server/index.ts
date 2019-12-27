@@ -17,7 +17,7 @@ TypeORM.useContainer(Container);
 export async function bootstrap(): Promise<void> {
     try {
         const path = `${__dirname}/../../.env.${process.env.NODE_ENV}`;
-
+        // console.log(`${process.env.NODE_ENV}`);
         dotenv.config({ path: path });
 
         const connectionOptions = await getConnectionOptions(process.env.NODE_ENV);

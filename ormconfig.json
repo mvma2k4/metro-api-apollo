@@ -26,14 +26,41 @@
    {
       "name": "test",
       "type": "postgres",
-      "host": "localhost",
+      "host": "ec2-107-21-214-26.compute-1.amazonaws.com",
       "port": 5432,
-      "username": "postgres",
-      "password": "P4ssw0rd",
-      "database": "postgres",
+      "username": "noqonimcynfeim",
+      "password": "ea83320742ab325a582a049b87765594709771d8c4cffffb5ffef3125e330bfc",
+      "database": "d2db57oh2rcebp",
       "synchronize": true,
       "logging": false,
       "dropSchema": true,
+      "extra": {
+         "ssl": true
+      },
+      "entities": [
+         "src/entities/**/*.ts"
+      ],
+      "migrations": [
+         "src/migration/**/*.ts"
+      ],
+      "subscribers": [
+         "src/subscriber/**/*.ts"
+      ]
+   },
+   {
+      "name": "production",
+      "type": "postgres",
+      "host": "ec2-107-21-214-26.compute-1.amazonaws.com",
+      "port": 5432,
+      "username": "noqonimcynfeim",
+      "password": "ea83320742ab325a582a049b87765594709771d8c4cffffb5ffef3125e330bfc",
+      "database": "d2db57oh2rcebp",
+      "synchronize": true,
+      "logging": false,
+      "dropSchema": true,
+      "extra": {
+         "ssl": true
+      },
       "entities": [
          "src/entities/**/*.ts"
       ],
