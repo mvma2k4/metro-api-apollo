@@ -4,7 +4,7 @@
   "description": "Metropolitan graphql api server",
   "main": "index.js",
   "dependencies": {
-    "apollo-server": "^2.6.7",
+    "apollo-server": "^2.14.2",
     "bcryptjs": "^2.4.3",
     "cross-env": "^5.2.1",
     "dotenv": "^8.0.0",
